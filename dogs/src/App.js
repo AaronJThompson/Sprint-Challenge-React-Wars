@@ -33,6 +33,19 @@ class App extends React.Component {
     return `https://dog.ceo/api/breed/${breed}/images/random`
   }
 
+  getBreedImage = breed => {
+    fetch(URL)
+    .then(res => {
+      return res.json();
+    })
+    .then(data => {
+      return data.message;
+    })
+    .catch(err => {
+      throw new Error(err);
+    });
+  }
+
   render() {
     return (
       <div className="App">
