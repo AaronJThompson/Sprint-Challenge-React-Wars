@@ -10,12 +10,20 @@ export default function CharacterContainer(props){
             return char;
         })
     }
+    let charsWithID = addIdsToCharacter(charData);
     return (
         <div className="character-container">
             {
-                charData.map((char) => {
+                charsWithID.map((char) => {
                     return (
-                        <Character
+                        <Character 
+                            key={`character${char.id}`}
+                            name={char.name}
+                            birthYear={char.birth_year}
+                            gender={char.gender}
+                            hairColor={char.hair_color}
+                            height={char.height}
+                        />
                     )
                 })
             }
