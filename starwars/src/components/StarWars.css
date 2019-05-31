@@ -1,0 +1,8 @@
+.character-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
