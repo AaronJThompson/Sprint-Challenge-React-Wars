@@ -31,11 +31,9 @@ class App extends React.Component {
   };
 
   getAllBreedImages = breeds => {
-    let newBreeds = {}
-    return breeds.map(breed => {
-      breed.imageURL = this.getBreedImage(breed);
-      return breed;
-    })
+    for (const breed in breeds) {
+      breeds[breed].imageURL = this.getBreedImage(breed);
+    }
   }
 
   constructDogURL = breed => {
