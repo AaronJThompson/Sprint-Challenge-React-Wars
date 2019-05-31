@@ -1,0 +1,46 @@
+.character-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 45rem;
+    margin: 0 auto;
+}
+
+.character {
+    min-width: 10rem;
+    background-color: #ff8a3d;
+    border-radius: .8rem;
+    font-size: 1.2rem;
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    color: white;
+}
+.character h2{
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.character ul li{
+    text-align: left;
+}
+.character ul li span{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 200;
+}
+
+.pagination{
+    margin: 2rem 0;
+}
+.pagination button{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #262122;
+    color: #F2F2F2;
+    border-radius: .5rem;
+}
+
+.previous-page{
+    margin-right: 1rem;
+}

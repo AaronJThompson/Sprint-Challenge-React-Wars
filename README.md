@@ -24,13 +24,28 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web. 
 
-- [ ] What does it mean to _think_ in react?
+A: React JS is a Javascript library with the goal of making single page applications easier to build and make DOM manipulations easier from web developers and more effecient for the browser.
+React JS uses something called Virtual DOM. This is a representation of what we want the real DOM in the browser to look like. This enables the developer to make changes to the Virtual DOM as they like and React will make the changes efficiently by only changing the neccasary parts.
+This is opposed to the developer having to be very conscious about what they change in the DOM so the browser has to do as little as possible. React will manage this for us. 
 
-- [ ] Describe state.
+React also allows us as developers to split the page up into components and create dynamic web pages more easily. By splitting the page into components that can be re-used and created on the fly means that pieces of the page can be written once and created as many times as we like. It also allows the page 
+to be more responsive to data. By creating components from data we can very easily present the page in a format that is both user friendly but also representative of the data we are trying to display.
 
-- [ ] Describe props.
+- [ ] What does it mean to _think_ in react? 
+
+A: Thinking in React means to actively split up the page into components and the data and state those components may require. Thinking in React is a way for developers to synergise with the data and state of the page rather than worrying to much about the resulting HTML and CSS.
+A developer who thinks in React should be able to easily split up pages into components and see where the state of those components should be held. They should also be able to understand the tree of state and where events and data should be passed around to make all components work together.
+
+- [ ] Describe state. 
+
+A: State is an object containing data relavent to the data components are working on and with. State is usually not used to display static data, or data used to directly to effect the component it is stored on. It is used when components should react and render changes in input and incoming data 
+from external sources. One example would be the current value of an input field. It would be stored in state so that the parent component has data reflecting what is displayed and inputted in the page so that it can perform actions based on this.
+
+- [ ] Describe props. 
+
+A: Props are values passed into components to tell the element what and how to render itself. Props are used to contstruct components in a meaningful way. They are similar to atrributes used in HTML, but with a higher order of abstraction. One example would be passing the content of a component to render as a prop so it can populate the elements it displays. Props can also be used to provide callbacks for events so that the parent component can use it's own methods as callbacks and take control of actions performed on it's child components.
 
 ## Project Set Up
 
