@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    max-width: 80rem;
+    max-width: 45rem;
     margin: 0 auto;
 }
 
@@ -11,8 +11,19 @@
     min-width: 10rem;
     background-color: #ff8a3d;
     border-radius: .8rem;
+    font-size: 1.2rem;
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    color: white;
 }
-
+.character h2{
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
 .character ul li{
-    
+    text-align: left;
+}
+.character ul li span{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 200;
 }

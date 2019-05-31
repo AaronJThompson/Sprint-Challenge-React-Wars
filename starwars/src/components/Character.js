@@ -9,10 +9,21 @@ export default function Character(props){
         <div className="character">
             <h2>{name}</h2>
             <ul>
-                <li>Birth Year: {birthYear}</li>
-                <li>Gender: {gender}</li>
-                <li>Hair Color: {hairColor}</li>
-                <li>Height: {height}</li>
+                <li>
+                    Birth Year: <span>{birthYear}</span>
+                </li>
+
+                <li>
+                    Gender: <span>{gender}</span>
+                </li>
+
+                <li>
+                    Hair Color: <span>{hairColor}</span>
+                </li>
+                
+                <li>
+                    Height: <span>{height}</span>
+                </li>
             </ul>
         </div>
     )
