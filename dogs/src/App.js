@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import DogContainer from './components/DogContainer'
 
 class App extends React.Component {
   constructor() {
@@ -19,9 +20,9 @@ class App extends React.Component {
         return res.json();
       })
       .then(data => {
-        console.log(data);
+        let breedsWithImages = this.getAllBreedImages(data.message);
         this.setState({
-          dogData: data.message,
+          dogData: breedsWithImages,
         });
       })
       .catch(err => {
@@ -29,12 +30,20 @@ class App extends React.Component {
       });
   };
 
+  getAllBreedImages = breeds => {
+    let newBreeds = {}
+    return breeds.map(breed => {
+      breed.imageURL = this.getBreedImage(breed);
+      return breed;
+    })
+  }
+
   constructDogURL = breed => {
     return `https://dog.ceo/api/breed/${breed}/images/random`
   }
 
   getBreedImage = breed => {
-    fetch(URL)
+    fetch(this.constructDogURL(breed))
     .then(res => {
       return res.json();
     })
@@ -50,6 +59,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 className="Header">Dogs!</h1>
+        <DogContainer dogs={this.state.dogData} />
       </div>
     );
   }

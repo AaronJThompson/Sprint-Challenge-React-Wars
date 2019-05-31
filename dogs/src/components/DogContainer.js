@@ -19,7 +19,7 @@ export default function DogContainer(props) {
     return (
         <div className="dog-container">
             {
-                createDogs(dogs);
+                createDogs(dogs)
             }
         </div>
     )
