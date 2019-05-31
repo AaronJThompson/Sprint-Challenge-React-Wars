@@ -3,14 +3,23 @@ import './StarWars.css';
 import Character from './Character';
 export default function CharacterContainer(props){
     let { charData } = props;
+    
     function addIdsToCharacter(chars) {
+
+        // Regex match for people id in StarWars API url
         let matchPeopleId = /(?<=people\/)\d+/
+
         return chars.map((char) => {
-            char.id = char.url.match(matchPeopleId)[0];
+
+            // Get first match. Example: https://swapi.co/api/people/12/ will match '12'
+            char.id = parseInt(char.url.match(matchPeopleId)[0]);
+
             return char;
         })
     }
+    //Create new array with ID field added
     let charsWithID = addIdsToCharacter(charData);
+
     return (
         <div className="character-container">
             {
