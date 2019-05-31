@@ -6,3 +6,9 @@
     max-width: 80rem;
     margin: 0 auto;
 }
+
+.character {
+    min-width: 10rem;
+    background-color: #ff8a3d;
+    border-radius: .8rem;
+}
