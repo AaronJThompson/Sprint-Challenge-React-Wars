@@ -6,7 +6,12 @@ export default function CharacterContainer(props){
 
     return (
         <div className="character-container">
-            
+            {
+                charData.map((char) => {
+                    return (
+                    )
+                })
+            }
         </div>
     )
 }
